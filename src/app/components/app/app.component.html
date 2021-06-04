@@ -1,0 +1,15 @@
+<div [className]="'head'">
+  <div routerLink="" [className]="'home'">
+    <h1>HOME</h1>
+  </div>
+
+    <button routerLink="users">Users</button>
+    <button [routerLink]="['posts']">Posts</button>
+    <button routerLink="comments">Comments</button>
+    <button [routerLink]="['albums']">Album</button>
+    <button routerLink="photos">Photos</button>
+    <button [routerLink]="['todos']">Todos</button>
+</div>
+
+
+<router-outlet></router-outlet>
