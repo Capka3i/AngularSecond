@@ -2,20 +2,20 @@ import {Component, Input, OnInit} from '@angular/core';
 import {IUser} from "../../model/User";
 
 
-@Component({
+@Component ({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
 
-  @Input()
+  @Input ()
   user: IUser
 
-  constructor() {
+  constructor () {
   }
 
-  ngOnInit(): void {
+  ngOnInit (): void {
   }
 
 }

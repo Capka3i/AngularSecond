@@ -1,15 +1,16 @@
-import { Injectable } from '@angular/core';
-import {ActivatedRouteSnapshot, ActivationEnd, CanActivate, RouterStateSnapshot, UrlTree} from "@angular/router";
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree} from "@angular/router";
 import {Observable} from "rxjs";
 
-@Injectable({
+@Injectable ({
   providedIn: 'root'
 })
-export class ActivatorService implements CanActivate{
+export class ActivatorService implements CanActivate {
 
-  constructor() { }
+  constructor () {
+  }
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return confirm('real enter?');
+  canActivate (route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    return confirm ('real enter?');
   }
 }

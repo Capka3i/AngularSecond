@@ -1,15 +1,16 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot, UrlTree} from "@angular/router";
 import {Observable} from "rxjs";
 
-@Injectable({
+@Injectable ({
   providedIn: 'root'
 })
-export class DiactivatorService implements CanDeactivate<boolean>{
+export class DiactivatorService implements CanDeactivate<boolean> {
 
-  constructor() { }
+  constructor () {
+  }
 
-  canDeactivate(component: boolean, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return confirm('leave now&');
+  canDeactivate (component: boolean, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    return confirm ('leave now&');
   }
 }

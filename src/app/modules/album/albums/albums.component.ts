@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AlbumService} from "../../../service";
 import {IAlbum} from "../model/Album";
 
-@Component({
+@Component ({
   selector: 'app-albums',
   templateUrl: './albums.component.html',
   styleUrls: ['./albums.component.css']
 })
 export class AlbumsComponent implements OnInit {
 
-  albums:IAlbum[]
+  albums: IAlbum[]
 
-  constructor( private albumService : AlbumService) { }
+  constructor (private albumService: AlbumService) {
+  }
 
-  ngOnInit(): void {
-      this.albumService.getAlbum().subscribe(value => this.albums = value)
+  ngOnInit (): void {
+    this.albumService.getAlbum ().subscribe (value => this.albums = value)
   }
 
 }
