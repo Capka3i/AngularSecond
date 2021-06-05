@@ -1,2 +1,9 @@
-<router-outlet></router-outlet>
-<app-album [album]="album" *ngFor="let album of albums"></app-album>
+<h2>Album</h2>
+<div [className]="'fine'">
+  <div>
+    <app-album [album]="album" *ngFor="let album of albums"></app-album>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

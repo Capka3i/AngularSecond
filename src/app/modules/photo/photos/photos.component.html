@@ -1,3 +1,9 @@
 <h2>Photos</h2>
-<router-outlet></router-outlet>
-<app-photo [photo]="photo" *ngFor="let photo of photos"></app-photo>
+<div [className]="'fine'">
+  <div>
+    <app-photo [photo]="photo" *ngFor="let photo of photos"></app-photo>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
