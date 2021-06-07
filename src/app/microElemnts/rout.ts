@@ -23,6 +23,6 @@ export let rout: Routes = [
   {path: COMMENTS, loadChildren: () => import('../modules/comment/comment.module').then (m => m.CommentModule)},
   {path: PHOTOS, loadChildren: () => import('../modules/photo/photo.module').then (m => m.PhotoModule)},
   {path: TODOS, loadChildren: () => import('../modules/todo/todo.module').then (m => m.TodoModule)},
-
+  {path: 'futurama', loadChildren: ()=> import('../modules/futurama/futurama.module').then(m=> m.FuturamaModule)}
 
 ]

@@ -6,16 +6,20 @@ import {Observable} from "rxjs";
 import {apiJson, POSTS} from "../../../conts";
 import {IPost} from "../model/Post";
 
-@Injectable ({
+@Injectable({
   providedIn: 'root'
 })
 export class PostService {
 
 
-  constructor (private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient) {
   }
 
-  getPosts (): Observable<IPost[]> {
-    return this.httpClient.get<IPost[]> (apiJson + POSTS)
+  getPosts(): Observable<IPost[]> {
+    return this.httpClient.get<IPost[]>(apiJson + POSTS)
+  }
+
+  getSomePosts(someId: number): Observable<IPost> {
+    return this.httpClient.get<IPost>(apiJson + POSTS + '/' + someId)
   }
 }

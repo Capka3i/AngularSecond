@@ -1,9 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {IPost} from "../../model/Post";
+import {PostService} from "../../service/post.service";
 
 
-@Component ({
+@Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
@@ -11,17 +12,20 @@ import {IPost} from "../../model/Post";
 export class PostComponent implements OnInit {
 
 
-  @Input ()
+  @Input()
   post: IPost
 
-  constructor (private router: Router, private activatorRouter: ActivatedRoute) {
+  constructor(private router: Router, private activatorRouter: ActivatedRoute, private postService: PostService) {
   }
 
-  ngOnInit (): void {
+  ngOnInit(): void {
   }
 
 
-  showPost () {
-    this.router.navigate ([this.post.id], {relativeTo: this.activatorRouter, state: this.post})
+  showPost() {
+    return this.router.navigate([this.post.id], {
+      relativeTo: this.activatorRouter,
+      state: this.post
+    });
   }
 }
